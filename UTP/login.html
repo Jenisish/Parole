@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Document</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            /* background-image: -moz-repeating-linear-gradient(black); */
+            font-family: 'Signika Negative', sans-serif;
+            background-image: url('/UTP/img6.jpg');
+            background-size: cover;
+        }
+       header{
+         display: flex;   
+        }
+        h2{
+            margin-top: 26px;
+            margin-left: 30%;
+            font-size: 3em;
+        }
+        section{
+            display: flex;
+            justify-content: center;
+        }
+        #container{
+            
+            margin-top: 6rem;
+            height: 33em;
+            width: 40em;
+            border: 1px solid black;
+            background-color:transparent;
+            border-radius: 38px;
+            
+        }
+        #box{
+            display: flex;
+            font-weight: bold;
+            margin: -10px ;
+        }
+        h1{
+            font-size: 44px;
+            margin-top: 44px;
+            margin-left: 69px;
+        }
+        h1 a{
+            padding: 22px;
+            color: black;
+        }
+     
+        #la-details{
+            margin: 34px;
+            padding: 2px;
+            font-size: 25px;
+        }
+        .details{
+            margin: 35px;
+        }
+        .details input{
+            width: 24em;
+            height: 31px;
+            border-radius: 6px;
+
+        }
+
+        .forpass{
+            font-size: 18px;
+            margin-top: 18px;
+            margin-left: 8em;
+        }
+
+        
+        button{
+            background-color: #53dc66;
+            width: 6em;
+            font-size: 25px;
+            margin-left: 8em;
+            padding: 7px;
+            border-radius: 10px;
+        }
+        .new{
+            font-size: 18px;
+            margin-top: 18px;
+            margin-left: 10em;
+            
+        }
+    </style>
+    <script>
+       
+       function myFunction() {
+            // Replace this with your actual login logic.
+            // For demonstration purposes, I'm using a simple check.
+            var username = document.getElementById("UserName").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "your_username" && password === "your_password") {
+                alert("Login successful!"); // You can replace this with your desired action.
+                // For example, you can redirect the user to a new page:
+                // window.location.href = "dashboard.html";
+            } else {
+                alert("Login failed. Please check your credentials.");
+            }
+        } 
+ 
+    </script>
+</head>
+<body>
+    <!-- <header>
+        <h2>
+            Under-Trail Prisoner's
+        </h2>
+    </header> -->
+    <section>
+        <div id="container">
+            <div id="box">
+                
+                <h1><a href="/UTP/main.html">
+                <i class="fa-solid fa-arrow-left"></i></a>Login</h1>
+                
+            </div>
+            <div id="la-details">
+                <form action="backend.php">
+                    <div id="typename" class="details">
+                        
+                        <label for="UserName"><i class="fa-regular fa-user"></i>&nbsp;UserName :</label>
+                        <input type="text" name="MyName" id="UserName" placeholder="&nbsp;username">
+                    </div>
+                    <!-- <div id="useremail" class="details">
+                        <label for="email"><i class="fa-regular fa-envelope"></i>&nbsp;Email : </label>
+                        <input type="email" name="MyEmail" id="email" placeholder="&nbsp;abc@example.com">
+                    </div> -->
+                    <div id="pass" class="details">
+                        <label for="password"><i class="fa-solid fa-key"></i>Password : </label>
+                        <input type="text" name="MyPass" id="password" placeholder="&nbsp;password">
+                        <div class="forpass">
+                        Forget Password?<a href="login.html">click here</a></button></div>
+                    </div>
+                    <button  onclick="myFunction()" id="" >Submit</button><br/>
+                    <div class="new">
+                        Don't have an account! <a href="login1.html">Create one</a>
+                    </div>
+                    
+                    </div>
+                </form>
+            </div>
+        
+        </div>
+
+</section>
+</body>
+</html>

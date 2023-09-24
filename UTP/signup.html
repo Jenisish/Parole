@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup and Visitor Forms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Added flexbox layout */
+        }
+
+        .dashboard {
+            background-color: #333;
+            color: #fff;
+            width: 200px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            background: #00CC99;
+            text-align: center;
+            font-size: 308px;
+            padding: 20px 1em;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: "Arial Black";
+        }
+
+        .dashboard-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dashboard-button:hover {
+            background-color: #ff4500;
+        }
+
+        .menu {
+            position: absolute;
+            top: 60px;
+            left: -200px;
+            background-color: #333;
+            color: #ff4500;
+            padding: 10px;
+            border-radius: 5px;
+            transition: left 0.3s;
+        }
+
+        .menu a {
+            display: block;
+            margin-bottom: 30px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            background-color: #32CD32;
+            color: #000;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 7rem;
+            flex-grow: 1; /* Allow flex items to grow */
+        }
+
+        .form {
+            display: flex;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 45%;
+            margin-bottom: 20px;
+        }
+
+        .form h2 {
+            text-align: center;
+        }
+
+        .form input[type="text"],
+        .form input[type="email"],
+        .form input[type="tel"],
+        .form select,
+        .form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form button:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="dashboard-button" id="dashboard-button">MENU</div>
+    <div class="menu" id="menu">
+        <a href="prisoner.html">Home</a>
+        <a href="Login.html"target="_blank">Login</a>
+        <a href="Signup.html"target="_blank">Signup</a>
+        <a href="jails.html"target="_blank">jails</a>
+        <a href="Q&A.html"target="_blank">Q & A</a>
+        <a href="ChatBot.html" target="_blank">ChatBot</a>
+        <a href="notification.html" target="_blank">Notification Center</a>
+        <a href="about.html"target="_blank">About</a>
+        <div id="welcome-message">
+            <!-- The "Welcome to my website" message will be displayed here -->
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="form1-name">
+            <h2>Prisoner Details</h2>
+            <div class="form1-details">
+            <form action="signup.html" method="POST">
+                <label for="UserName">&nbsp;Name :</label>
+                        <input type="text" name="MyName" id="UserName" placeholder="&nbsp;Name">
+                <label for="Address">&nbsp;Address :</label>
+                <input type="text" name="address" placeholder="Address" required>
+                <select name="gender" required>
+                    <option value="-Select-">Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="number" name="age" placeholder="Age" required>
+                <select name="relation" required>
+                    <option value="relation">-Select-</option>
+                    <option value="aunt">Aunt</option>
+                    <option value="brother">Brother</option>
+                    <!-- Add more relation options here -->
+                </select>
+                <select name="identity_proof_type" required>
+                    <option value="">Identity Proof</option>
+                    <option value="aadhar_id">AADHAR ID</option>
+                    <option value="driving_license">Driving License</option>
+                    <option value="pan_card">PAN card</option>
+                    <option value="voter_id">Voter ID</option>
+                    <option value="none">None</option>
+                </select>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+</div>
+        <div class="form">
+            <h2>Supporter Details</h2>
+            <form action="visitor_details.html" method="POST">
+                <input type="text" name="visitor_name" placeholder="Visitor Name" required>
+                <input type="text" name="visitor_address" placeholder="Visitor Address" required>
+                <input type="text" name="prisoner_name" placeholder="Prisoner Name" required>
+                <input type="date" name="visit_date" required>
+                <textarea name="purpose" placeholder="Purpose of Visit" required></textarea>
+                <button type="submit">Submit Details</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const dashboardButton = document.getElementById('dashboard-button');
+        const menu = document.getElementById('menu');
+        const loginLink = document.getElementById('login-link');
+        const SignupLink = document.getElementById('Signup-link');
+        const visitorDetailsLink = document.getElementById('visitor-details-link');
+        const loginForm = document.getElementById('login-form');
+        const visitorDetailsForm = document.getElementById('visitor-details-form');
+        const welcomeMessage = document.getElementById('welcome-message');
+
+        dashboardButton.addEventListener('click', () => {
+            if (menu.style.left === '0px') {
+                menu.style.left = '-200px';
+            } else {
+                menu.style.left = '0px';
+            }
+        });
+
+        loginLink.addEventListener('click', () => {
+            loginForm.style.display = 'block';
+            visitorDetailsForm.style.display = 'none';
+        });
+
+        visitorDetailsLink.addEventListener('click', () => {
+            visitorDetailsForm.style.display = 'block';
+            loginForm.style.display = 'none';
+        });
+
+        const aboutLink = document.querySelector('a[href="about.html"]');
+        aboutLink.addEventListener('click', () => {
+            welcomeMessage.textContent = 'Welcome to my website!';
+        });
+    </script>
+</body>
+</html>

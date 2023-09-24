@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Include Font Awesome CSS -->
+    <style>
+        body{
+            background-image: url('https://c4.wallpaperflare.com/wallpaper/34/747/591/man-made-scales-wallpaper-preview.jpg');
+            background-size: cover;
+        }
+        /* Container styling */
+        .container {
+            text-align: center;
+            margin: 100px auto; /* Increased top margin to lower the content */
+        }
+
+        /* Styles for the Advocate, Prisoners, and Dashboard elements */
+        #advocate,
+        #prisoners,
+        #dashboard {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px;
+            padding: 10px 20px;
+            border: 2px solid blue;
+            border-radius: 5px;
+            cursor: pointer;
+            color: blue;
+            transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
+            background-color: #fff;
+        }
+
+        /* Change background and text color on hover for Advocate, Prisoners, and Dashboard elements */
+        #advocate:hover,
+        #prisoners:hover,
+        #dashboard:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        /* Modal dialog styling */
+        .modal {
+            display: none;
+            position: center;
+            top: 25%;
+            left: 25%;
+            width: 75%;
+            height: 100%;
+            background-color: rgba(40, 39, 46, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: transparent;
+            padding: 15px;
+            border-radius: 3px;
+            text-align: center;
+        }
+
+        /* Form input field styling */
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="password"] {
+            width: 65%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        form input[type="submit"] {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #0066cc;
+        }
+
+        /* Top-right login button */
+        .top-right {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .top-right button {
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .top-right button:hover {
+            background-color: #0066cc;
+        }
+
+        /* Top-left "Freedom Mate" text with animation */
+        .top-left {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: blue;
+            /* Animation for the "Freedom Mate" text */
+            animation: bounce 2s step-start;
+        }
+
+        /* Animation for the "Freedom Mate" text */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-left">Freedom Mate</div>
+    <div class="top-right">
+        <button id="loginButton">Login</button>
+        <button id="contactUsButton">Contact Us</button> <!-- Added Contact Us button -->
+    </div>
+    <div class="container">
+        <h1 id="advocate">Advocate</h1>
+        <h1 id="prisoners">Prisoners</h1>
+        <h1 id="dashboard">Dashboard</h1> <!-- Added Dashboard button -->
+    </div>
+
+    <!-- Modal dialog for Advocate -->
+    <div class="modal" id="advocateModal">
+        <div class="modal-content">
+            <h2><i class="fas fa-user"></i> Advocate Sign-up</h2>
+            <form>
+                <label for="advocateName"><i class="fas fa-user"></i> Name:</label>
+                <input type="text" id="advocateName" name="advocateName" placeholder="Enter Your Name" required><br><br>
+                <label for="advocateId"><i class="fas fa-id-card"></i> ID:</label>
+                <input type="text" id="advocateId" name="advocateId" placeholder="Enter Your ID" required><br><br>
+                <label for="advocateMobile"><i class="fas fa-phone"></i> Mobile Number:</label>
+                <input type="text" id="advocateMobile" name="advocateMobile" placeholder="Enter Mobile Number" required><br><br>
+                <label for="advocateEmail"><i class="fas fa-envelope"></i> Email:</label>
+                <input type="email" id="advocateEmail" name="advocateEmail" placeholder="Enter Email" required><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal dialog for Prisoner -->
+    <div class="modal" id="prisonerModal">
+        <div class="modal-content">
+            <h2><i class="fas fa-user"></i> Prisoner Sign-up</h2>
+            <form>
+                <label for="prisonerName"><i class="fas fa-user"></i> Name:</label>
+                <input type="text" id="prisonerName" name="prisonerName" placeholder="Enter Your Name" required><br><br>
+                <label for="prisonerCaseId"><i class="fas fa-id-badge"></i> Case ID:</label>
+                <input type="text" id="prisonerCaseId" name="prisonerCaseId" placeholder="Enter Case ID" required><br><br>
+                <label for="prisonerAge"><i class="fas fa-calendar"></i> Age:</label>
+                <input type="text" id="prisonerAge" name="prisonerAge" placeholder="Enter Age" required><br><br>
+                <label for="prisonerMobile"><i class="fas fa-phone"></i> Mobile Number:</label>
+                <input type="text" id="prisonerMobile" name="prisonerMobile" placeholder="Enter Mobile Number" required><br><br>
+                <label for="prisonerEmail"><i class="fas fa-envelope"></i> Email:</label>
+                <input type="email" id="prisonerEmail" name="prisonerEmail" placeholder="Enter Your Mail" required><br><br>
+                <label for="familyDetails"><i class="fas fa-users"></i> Family Details:</label>
+                <input type="text" id="familyDetails" name="familyDetails" placeholder="Enter Family Details" required><br><br>
+                <label for="prisonerAddress"><i class="fas fa-map-marker-alt"></i> Address:</label>
+                <input type="text" id="prisonerAddress" name="prisonerAddress" placeholder="Enter Address" required><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    
+    </div>
+    <!-- Modal dialog for login -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <h2>Login </h2>
+            <!-- Add the "Forgot Password" link within the login form -->
+<form id="loginForm">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" placeholder="Enter Your Username" required><br><br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" placeholder="Enter Your Password" required><br><br>
+  <input type="submit" value="Login">
+  <a href="#" id="forgotPasswordLink">Forgot Password?</a> <!-- Add this link -->
+</form>
+
+        </div>
+    </div>
+
+    <!-- Modal dialog for password reset -->
+<div class="modal" id="forgotPasswordModal">
+  <div class="modal-content">
+      <h2>Forgot Password</h2>
+      <form id="forgotPasswordForm">
+          <label for="resetEmail">Email:</label>
+          <input type="email" id="resetEmail" name="resetEmail" placeholder="Enter Your Email" required><br><br>
+          <input type="submit" value="Reset Password">
+      </form>
+  </div>
+</div>
+
+
+    <!-- Modal dialog for Contact Us -->
+    <div class="modal" id="contactUsModal">
+        <div class="modal-content">
+            <h2>Contact Us</h2>
+            <form id="contactUsForm">
+                <label for="contactName">Name:</label>
+                <input type="text" id="contactName" name="contactName" placeholder="Enter Your Name" required><br><br>
+                <label for="contactEmail">Email:</label>
+                <input type="email" id="contactEmail" name="contactEmail" placeholder="Enter Your Email" required><br><br>
+                <label for="contactMessage">Message:</label>
+                <textarea id="contactMessage" name="contactMessage" placeholder="Enter Your Message" required></textarea><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let currentModal = null;
+        let loggedIn = false;
+    
+        // Function to display the Advocate sign-up modal
+        function openAdvocateModal() {
+            closeCurrentModal();
+            currentModal = document.getElementById('advocateModal');
+            currentModal.style.display = 'block';
+        }
+    
+        // Function to display the Prisoner sign-up modal
+        function openPrisonerModal() {
+            closeCurrentModal();
+            currentModal = document.getElementById('prisonerModal');
+            currentModal.style.display = 'block';
+        }
+    
+        // Function to display the Dashboard modal
+        function openDashboardModal() {
+            if (loggedIn) {
+                closeCurrentModal();
+                currentModal = document.getElementById('dashboardModal');
+                currentModal.style.display = 'block';
+            } }
+    
+        // Function to display the Contact Us modal
+        function openContactUsModal() {
+            closeCurrentModal();
+            currentModal = document.getElementById('contactUsModal');
+            currentModal.style.display = 'block';
+        }
+    
+        function openloginModal() {
+            closeCurrentModal();
+            currentModal = document.getElementById('loginModal');
+            currentModal.style.display = 'block';
+        }
+    
+        // Function to close the current open modal
+        function closeCurrentModal() {
+            if (currentModal) {
+                currentModal.style.display = 'none';
+            }
+        }
+    
+        // Event listener for login form submission
+        const loginForm = document.getElementById('loginForm');
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+    
+            // Define your valid username and password
+            const validUsername = 'your_username';
+            const validPassword = 'your_password';
+    
+            // Check if the entered username and password match the valid credentials
+            if (username === validUsername && password === validPassword) {
+                loggedIn = true;
+                alert('Login successful.');
+                closeCurrentModal();
+            } else {
+                alert('Login failed. Please check your credentials.');
+            }
+        });
+    
+        // Get references to the Advocate, Prisoners, Dashboard, and Contact Us elements by their IDs
+        const advocateElement = document.getElementById('advocate');
+        const prisonerElement = document.getElementById('prisoners');
+        const dashboardElement = document.getElementById('dashboard');
+        const contactUsButton = document.getElementById('contactUsButton');
+        const loginButton = document.getElementById('loginButton');
+    
+        // Add click event listeners to each element
+        advocateElement.addEventListener('click', openAdvocateModal);
+        prisonerElement.addEventListener('click', openPrisonerModal);
+        dashboardElement.addEventListener('click', openDashboardModal);
+        contactUsButton.addEventListener('click', openContactUsModal);
+        loginButton.addEventListener('click', openloginModal);
+    
+        // Event listener for contact us form submission
+        const contactUsForm = document.getElementById('contactUsForm');
+        contactUsForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Handle the contact form submission here
+            alert('Thank you for contacting us. We will get back to you soon.');
+            closeCurrentModal();
+        });
+
+        // Function to display the "Forgot Password" modal
+function openForgotPasswordModal() {
+    closeCurrentModal();
+    currentModal = document.getElementById('forgotPasswordModal');
+    currentModal.style.display = 'block';
+}
+
+// Event listener for the "Forgot Password?" link
+const forgotPasswordLink = document.getElementById('forgotPasswordLink');
+forgotPasswordLink.addEventListener('click', openForgotPasswordModal);
+
+// Event listener for the "Reset Password" form submission
+const forgotPasswordForm = document.getElementById('forgotPasswordForm');
+forgotPasswordForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const resetEmail = document.getElementById('resetEmail').value;
+
+    // Send a password reset email to the provided email address
+    // You can implement this functionality using a server-side script or a third-party service
+    // For this example, we'll just display a confirmation alert
+    alert(`A password reset email has been sent to ${resetEmail}.`);
+    
+    // Close the "Forgot Password" modal
+    closeCurrentModal();
+});
+
+    </script>
+    
+</body>
+</html>

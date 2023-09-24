@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blank Webpage</title>
+    
+    <style>
+        body {
+            background-image: url('court.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        #dashboard-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dashboard-button:hover {
+            background-color: #ff4500;
+        }
+
+        .menu {
+            position: absolute;
+            top: 40px;
+            left: -200px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            transition: left 0.3s;
+        }
+
+        .menu a {
+            display: block;
+            margin-bottom: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .login-form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+
+        .signup-form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-button" id="dashboard-button"><i class='fas fa-bars' id="btn"></i></div>
+    <div class="menu" id="menu">
+        <a href="my_account.html">Home</a>
+        <a href="#" id="login-link">Login</a>
+        <a href="#" id="signup-link">Signup</a>
+        <a href="prisoner_details.html">Prisoner Details</a>
+        <a href="Q&A.html">Q & A</a>
+        <a href="Notification Center.html">Notification Center</a>
+        <a href="share this app.html">Share this app</a>
+        <a href="rate this app.html">Rate this app</a>
+        <a href="about.html">About</a>
+		<div id="welcome-message">
+    <!-- The "Welcome to my website" message will be displayed here -->
+</div>
+
+	</div>
+    
+    <div class="login-form" id="login-form">
+        <h2>Login</h2>
+        <form action="your_server_login_script.php" method="POST">
+            <input type="text" name="username" placeholder="Username" required class="form-input">
+            <input type="password" name="password" placeholder="Password" required class="form-input">
+            <button type="submit" class="form-button">Login</button>
+        </form>
+    </div>
+
+    <div class="signup-form" id="signup-form">
+        <h2>Signup</h2>
+        <form action="your_server_signup_script.php" method="POST">
+            <input type="text" name="name" placeholder="Name" required class="form-input">
+            <input type="text" name="address" placeholder="Address" required class="form-input">
+            <select name="gender" required class="form-input">
+                <option value="gender">Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="number" name="age" placeholder="Age" required class="form-input">
+            <select type="text" name="Relation" placeholder="Relation" required class="form-input">
+                <option value="Relation">Relation</option>
+                <option value="aunt">Aunt</option>
+                <option value="brother">Brother</option>
+                <option value="brother_in_law">Brother-In-Law</option>
+                <option value="cousin">Cousin</option>
+                <option value="daughter">Daughter</option>
+                <option value="daughter_in_law">Daughter-In-Law</option>
+                <option value="father">Father</option>
+                <option value="father_in_law">Father-In-Law</option>
+                <option value="friend">Friend</option>
+                <option value="grand_daughter">Grand daughter</option>
+                <option value="grand_father">Grand Father</option>
+                <option value="grand_mother">Grand Mother</option>
+                <option value="grand_son">Grand Son</option>
+                <option value="husband / wife">Husband / Wife</option>
+                <option value="mother">Mother</option>
+                <option value="mother_in_law">Mother-In-Law</option>
+                <option value="neighbour">Neighbour</option>
+                <option value="nephew">Nephew</option>
+                <option value="others">Others</option>
+                <option value="sister_in_law">Sister</option>
+                <option value="Sister-In-Law">Sister-In-Law</option>
+                <option value="son">Son</option>
+                <option value="son_in_law">Son-In-Law</option>
+                <option value="uncle">Unlce</option>
+            </select>
+            <input type="text" name="identity_proof" placeholder="Identity Proof" required class="form-input">
+            <select name="identity_proof_type" required class="form-input">
+                <option value="aadhar_id">AADHAR ID</option>
+                <option value="driving_license">Driving License</option>
+                <option value="pan_card">PAN card</option>
+                <option value="voter_id">Voter ID</option>
+                <option value="none">None</option>
+            </select>
+            <!-- Add email and phone number fields -->
+            <input type="email" name="email" placeholder="Email Address" required class="form-input">
+            <input type="tel" name="phone" placeholder="Phone Number" required class="form-input">
+            <button type="submit" class="form-button">Signup</button>
+        </form>
+    </div>
+
+    <script>
+        const dashboardButton = document.getElementById('dashboard-button');
+        const menu = document.getElementById('menu');
+        const loginLink = document.getElementById('login-link');
+        const signupLink = document.getElementById('signup-link');
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        
+        dashboardButton.addEventListener('click', () => {
+            if (menu.style.left === '0px') {
+                menu.style.left = '-200px';
+            } else {
+                menu.style.left = '0px';
+            }
+        });
+
+        loginLink.addEventListener('click', () => {
+            loginForm.style.display = 'block';
+            signupForm.style.display = 'none'; // Hide signup form
+        });
+
+        signupLink.addEventListener('click', () => {
+            signupForm.style.display = 'block';
+            loginForm.style.display = 'none'; // Hide login form
+        });
+            // Add an event listener for the "About" option
+    const aboutLink = document.querySelector('a[href="about.html"]');
+    aboutLink.addEventListener('click', () => {
+        // Update the welcome message content
+        welcomeMessage.textContent = 'Welcome to my website!';
+    });
+    </script>
+</body>
+</html>

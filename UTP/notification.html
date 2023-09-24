@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undertrial Prisoners Notification Center</title>
+    <style>
+/* Reset some default styles */
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color:  #301934;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Dashboard Button Styles */
+.dashboard-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #808080;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dashboard-button:hover {
+    background-color: #FF5733 ;
+}
+
+/* Menu Styles */
+.menu {
+    position: absolute;
+    top: 60px;
+    left: -200px;
+    background-color: #333;
+    color: #ff4500;
+    padding: 10px;
+    border-radius: 5px;
+    transition: left 0.3s;
+}
+
+.menu a {
+    display: block;
+    margin-bottom: 30px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #0FFF50;
+    color: #000;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* Main Heading Styles */
+h1 {
+    background: FFFFFF ;
+    text-align: center;
+    font-size: 30px;
+    padding: 5px 1em;
+    font-weight: bold;
+    margin-left: 15%;
+    margin-right: 15%;
+    cursor: pointer;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    color: #fff;
+}
+
+/* Main Content Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #301934;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Notification Center Styles */
+.notification-container {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #301934;
+    overflow-y: auto;
+    transition: right 0.5s;
+    z-index: 1;
+}
+
+.notification {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.notification h2 {
+    color: #333;
+}
+
+.close-btn {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+}
+
+/* Additional styles for table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+/* Styles for pager */
+.pager {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.pager li {
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+.pager a {
+    text-decoration: none;
+}
+
+.pager li:first-child::before {
+    content: "Previous ";
+}
+
+.pager li:last-child::after {
+    content: " Next";
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Dashboard -->
+    <div class="dashboard-button" id="dashboard-button">=</div>
+    <div class="menu" id="menu">
+        <a href="prisoner.html">Home</a>
+        <a href="Login.html" target="_blank">Login</a>
+        <a href="Signup.html" target="_blank">Signup</a>
+        <a href="visitordetails.html" target="_blank">Visitor Details</a>
+        <a href="Q&A.html" target="_blank">Q & A</a>
+        <a href="notification.html" target="_blank">Notification Center</a>
+        <a href="about.html" target="_blank">About</a>
+        <div id="welcome-message"></div>
+    </div>
+
+    <header>
+        <h1>Undertrial Prisoners Notification Center</h1>
+    </header>
+
+  
+      <div class="view-content">
+      <table class="views-table cols-3">
+         <thead>
+      <tr>
+                  <th class="views-field views-field-counter" scope="col">
+            S.No.          </th>
+                  <th class="views-field views-field-title" scope="col">
+            Title          </th>
+                  <th class="views-field views-field-php" scope="col">
+            Download/Detail          </th>
+              </tr>
+    </thead>
+    <tbody>
+          <tr class="odd views-row-first">
+                  <td class="views-field views-field-counter">
+            1          </td>
+                  <td class="views-field views-field-title">
+            Notification No.19-2023 dated 14.09.2023 regarding Holding of Courts in Jail on regular basis to take up the cases of Undertrial prisoners.	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%2019-2023.pdf" target="_blank">Notification 19-2023.pdf</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-counter">
+            2          </td>
+                  <td class="views-field views-field-title">
+            Notification No. 18-2023 dated 14.09.2023 regarding Holding of Courts in Jail on regular basis to take up the cases of Undertrial prisoners.	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%2018-2023.pdf" target="_blank">Notification 18-2023.pdf</a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-counter">
+            3          </td>
+                  <td class="views-field views-field-title">
+            Notification 13-2023 dated 26.06.2023 regarding Holding of Courts in Jail on regular basis to take up the cases of Undertrial Prisoners.          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%2013-2023.pdf" target="_blank">Notification 13-2023.pdf</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-counter">
+            4          </td>
+                  <td class="views-field views-field-title">
+            Notification No. 06-2023 dated 28.03.2023 regarding Holding of Courts in Jail on regular basis to take up the cases of Undertrial prisoners.	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%2006-2023.pdf" target="_blank">Notification 06-2023.pdf</a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-counter">
+            5          </td>
+                  <td class="views-field views-field-title">
+            Notification No. 41-2022 dated 28.12.2022 regarding Holding of Courts in Jail on regular basis to take up the cases of Under Trial Prisoners	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%2041-2022.pdf" target="_blank">Notification 41-2022.pdf</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-counter">
+            6          </td>
+                  <td class="views-field views-field-title">
+            Notification No. 40-2022 dated 28.12.2022 regarding Holding of Courts in Jail on regular basis to take up the cases of Under Trial Prisoners	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%2040-2022.pdf" target="_blank">Notification 40-2022.pdf</a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-counter">
+            7          </td>
+                  <td class="views-field views-field-title">
+            Holiday &amp; Sunday Court of Metropolitan Magistrates, Mumbai for production of Accused person within 24 Hours.          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/2182-2022_0.pdf" target="_blank">2182-2022.pdf</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-counter">
+            8          </td>
+                  <td class="views-field views-field-title">
+            Regarding Holiday Remand court for producing Juvenile in conflict with Law.          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/2183-2022_0.pdf" target="_blank">2183-2022.pdf</a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-counter">
+            9          </td>
+                  <td class="views-field views-field-title">
+            Notification No. 28-2022 dated 26.09.2022 regarding Holding of Courts in Jail on regular basis to take up the cases of Under-trial Prisoners.	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%2028-2022.pdf" target="_blank">Notification 28-2022.pdf</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-counter">
+            10          </td>
+                  <td class="views-field views-field-title">
+            Notification No. 29-2022 dated 26.09.2022 regarding Holding of Courts in Jail on regular basis to take up the cases of Undertrial prisoners.	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%20No.%2029-2022.pdf" target="_blank">Notification No. 29-2022.pdf</a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-counter">
+            11          </td>
+                  <td class="views-field views-field-title">
+            Holding of Courts in Jail on regular basis to take up the cases of Undertrial prisoners. Notification No 21-2022 dated 24.06.2022	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification-21-2022.pdf" target="_blank">Notification-21-2022.pdf</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-counter">
+            12          </td>
+                  <td class="views-field views-field-title">
+            Holding of Courts in Jail on regular basis to take up the cases of Under-trial Prisoners. Notification No 20-2022 dated 24.06.2022	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%20-%2020-2022.pdf" target="_blank">Notification - 20-2022.pdf</a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-counter">
+            13          </td>
+                  <td class="views-field views-field-title">
+            Holiday Remand Court for producing Juvenile in conflict with Law . Office Order No 1093-2022 dated 23.06.2022.	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/1093-2022.pdf" target="_blank">1093-2022.pdf</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-counter">
+            14          </td>
+                  <td class="views-field views-field-title">
+            Holiday &amp; Sunday Court of Metropolitan Magistrates, Mumbai for production of Accused person within 24 Hours. Office Order No 1092-2022 dated 23.06.2022	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/1092-2022.pdf" target="_blank">1092-2022.pdf</a>          </td>
+              </tr>
+          <tr class="odd views-row-last">
+                  <td class="views-field views-field-counter">
+            15          </td>
+                  <td class="views-field views-field-title">
+            Notification No. 11-2022 dated 24.03.2022 regarding Holding of Courts in Jail on regular basis to take up the case          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%2011-2022.pdf" target="_blank">Notification 11-2022.pdf</a>          </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+      <h2 class="element-invisible"></h2><div class="item-list"><ul class="pager"><li class="pager-current first">1</li>
+<li class="pager-item"><a title="Go to page 2" href="/india/maharashtra/mumbai-cmm-court/notification?page=1">2</a></li>
+<li class="pager-item"><a title="Go to page 3" href="/india/maharashtra/mumbai-cmm-court/notification?page=2">3</a></li>
+<li class="pager-item"><a title="Go to page 4" href="/india/maharashtra/mumbai-cmm-court/notification?page=3">4</a></li>
+<li class="pager-item"><a title="Go to page 5" href="/india/maharashtra/mumbai-cmm-court/notification?page=4">5</a></li>
+<li class="pager-item"><a title="Go to page 6" href="/india/maharashtra/mumbai-cmm-court/notification?page=5">6</a></li>
+<li class="pager-item"><a title="Go to page 7" href="/india/maharashtra/mumbai-cmm-court/notification?page=6">7</a></li>
+<li class="pager-item"><a title="Go to page 8" href="/india/maharashtra/mumbai-cmm-court/notification?page=7">8</a></li>
+<li class="pager-next"><a title="Go to next page" href="/india/maharashtra/mumbai-cmm-court/notification?page=1">next ›</a></li>
+<li class="pager-last last"><a title="Go to last page" href="/india/maharashtra/mumbai-cmm-court/notification?page=7">last »</a></li>
+</ul></div>  
+  
+    
+</div>
+  
+  </div>
+</div>
+  </div>
+</div>
+    </script>
+</body>
+</html>
+<!-- ... Your HTML code above ... -->
+
+ <script>
+   const dashboardButton = document.getElementById('dashboard-button');
+        const menu = document.getElementById('menu');
+
+        dashboardButton.addEventListener('click', () => {
+            if (menu.style.left === '0px') {
+                menu.style.left = '-200px';
+            } else {
+                menu.style.left = '0px';
+            }
+        });
+
+        const successMessage = document.getElementById('success-message');
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            successMessage.style.display = 'block';
+        });
+        // JavaScript code
+        function openNotificationCenter() {
+            document.querySelector('.notification-container').style.right = '0';
+        }
+
+        function closeNotificationCenter() {
+            document.querySelector('.notification-container').style.right = '-300px';
+        }
+
+        // Automatically slide in the notification center after 3 seconds (for demonstration)
+        setTimeout(function() {
+            openNotificationCenter();
+        }, 3000);
+    </script>
+</body>
+</html>

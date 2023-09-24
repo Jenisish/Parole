@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style3.css">
+<style>
+  /* ... Your existing styles ... */
+
+  /* Add styles for the Advocate and Prisoner elements */
+  #advocate,
+  #prisoners {
+    font-size: 24px; /* Increase font size */
+    font-weight: bold; /* Add bold font weight */
+    margin: 10px; /* Add margin for spacing */
+    padding: 10px; /* Add padding for spacing */
+    border: 2px solid blue; /* Add a blue border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer;
+    color: blue;
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
+  }
+
+  /* Change background and text color on hover for Advocate and Prisoner elements */
+  #advocate:hover,
+  #prisoners:hover {
+    background-color: blue;
+    color: white;
+  }
+
+  /* ... Your existing styles ... */
+</style>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  h1 {
+    margin: 0 10px; /* Add some margin to separate the text */
+    cursor: pointer; /* Add cursor pointer to indicate clickability */
+    color: blue; /* Change the text color to blue */
+  }
+
+  /* Styles for the modal dialog */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+  }
+
+  /* Styles for the menu bar */
+  nav {
+    background-color: #333;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  nav .menu-icon {
+    cursor: pointer;
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav li {
+    display: inline;
+    margin: 0 10px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+  <nav>
+    <div class="menu-icon" id="menuIcon">&#9776;</div>
+    <ul id="menuItems">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="advocate_login.html">Advocate Login</a></li> <!-- Link to Advocate Login Page -->
+      <li><a href="prisoner_login.html">Prisoner Login</a></li> <!-- Link to Prisoner Login Page -->
+    </ul>
+  </nav>
+  <div class="container">
+    <h1 id="advocate">Advocate</h1>
+    <h1 id="prisoners">Prisoners</h1>
+  </div>
+
+  <!-- Modal dialog for Advocate -->
+  <div class="modal" id="advocateModal">
+    <div class="modal-content">
+      <h2>Advocate Sign-up</h2>
+      <form>
+        <label for="advocateName">Name:</label>
+        <input type="text" id="advocateName" name="advocateName"><br><br>
+        <label for="advocateId">ID:</label>
+        <input type="text" id="advocateId" name="advocateId"><br><br>
+        <label for="advocateMobile">Mobile Number:</label>
+        <input type="text" id="advocateMobile" name="advocateMobile"><br><br>
+        <label for="advocateEmail">Email:</label>
+        <input type="email" id="advocateEmail" name="advocateEmail"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal dialog for Prisoner -->
+  <div class="modal" id="prisonerModal">
+    <div class="modal-content">
+      <h2>Prisoner Sign-up</h2>
+      <form>
+        <label for="prisonerName">Name:</label>
+        <input type="text" id="prisonerName" name="prisonerName"><br><br>
+        <label for="prisonerCaseId">Case ID:</label>
+        <input type="text" id="prisonerCaseId" name="prisonerCaseId"><br><br>
+        <label for="prisonerAge">Age:</label>
+        <input type="text" id="prisonerAge" name="prisonerAge"><br><br>
+        <label for="prisonerMobile">Mobile Number:</label>
+        <input type="text" id="prisonerMobile" name="prisonerMobile"><br><br>
+        <label for="prisonerEmail">Email:</label>
+        <input type="email" id="prisonerEmail" name="prisonerEmail"><br><br>
+        <label for="familyDetails">Family Details:</label>
+        <input type="text" id="familyDetails" name="familyDetails"><br><br>
+        <label for="prisonerAddress">Address:</label>
+        <input type="text" id="prisonerAddress" name="prisonerAddress"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+<!-- About Section -->
+<section id="freedom-mate">
+    <h2>About Us</h2>
+    <p>
+      Welcome to our organization! At [Your Organization Name], we are dedicated to making a positive impact on our community and beyond. Our mission is to [insert your mission statement here].
+  
+      With a rich history dating back to [year of establishment], we have been at the forefront of [mention your organization's area of expertise or focus, e.g., "environmental conservation," "educational empowerment," "healthcare innovation"] for [number of years] years. Over the years, we have achieved significant milestones and touched the lives of countless individuals.
+  
+      Our Core Values:
+      <ul>
+        <li><strong>Community Engagement:</strong> We believe in actively involving the community in our projects and initiatives. Together, we can drive meaningful change.</li>
+        <li><strong>Innovation:</strong> Innovation is at the heart of what we do. We constantly seek new and creative ways to address challenges and create opportunities.</li>
+        <li><strong>Transparency:</strong> We are committed to transparency in our operations and financial matters. Our stakeholders trust us, and we value that trust.</li>
+        <li><strong>Sustainability:</strong> Environmental and social sustainability are priorities for us. We aim to leave a lasting, positive legacy for future generations.</li>
+      </ul>
+  
+      Our Projects:
+      <p>
+        Over the years, we have undertaken a wide range of projects that have had a significant impact on our community. Some of our notable projects include [briefly describe a few key projects or initiatives, including their outcomes and benefits].
+      </p>
+  
+      Get Involved:
+      <p>
+        We invite you to join us in our journey to make the world a better place. Whether you're a volunteer, donor, partner organization, or simply someone who shares our values, there are many ways to get involved and contribute to our mission. Together, we can achieve greatness.
+      </p>
+  
+      Contact Us:
+      <p>
+        If you have any questions, want to collaborate, or simply want to learn more about [Your Organization Name], please feel free to contact us. We are here to engage, inspire, and create positive change.
+      </p>
+    </p>
+  </section>
+  
+
+  <script>
+    // Function to display the Advocate sign-up modal
+    function openAdvocateModal() {
+      const modal = document.getElementById('advocateModal');
+      modal.style.display = 'block';
+    }
+
+    // Function to close the Advocate sign-up modal
+    function closeAdvocateModal() {
+      const modal = document.getElementById('advocateModal');
+      modal.style.display = 'none';
+    }
+
+    // Function to display the Prisoner sign-up modal
+    function openPrisonerModal() {
+      const modal = document.getElementById('prisonerModal');
+      modal.style.display = 'block';
+    }
+
+    // Function to close the Prisoner sign-up modal
+    function closePrisonerModal() {
+      const modal = document.getElementById('prisonerModal');
+      modal.style.display = 'none';
+    }
+
+    // Toggle the menu items when clicking the hamburger icon
+    const menuIcon = document.getElementById('menuIcon');
+    const menuItems = document.getElementById('menuItems');
+
+    menuIcon.addEventListener('click', function() {
+      menuItems.style.display = menuItems.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Get references to the Advocate and Prisoners elements by their IDs
+    const advocateElement = document.getElementById('advocate');
+    const prisonerElement = document.getElementById('prisoners');
+
+    // Add click event listeners to each element
+    advocateElement.addEventListener('click', openAdvocateModal);
+    prisonerElement.addEventListener('click', openPrisonerModal);
+  </script>
+</body>
+</html>
+
+</body>
+</html>

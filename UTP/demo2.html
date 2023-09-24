@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Side Navigation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        
+
+        .container {
+            display: flex;
+        }
+
+        .menu-button {
+            cursor: pointer;
+            padding: 15px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .menu-icon {
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+        }
+
+        .side-menu {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #000000;
+            overflow-x: hidden;
+            transition: 0.3s;
+        }
+
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .side-menu ul li {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .side-menu ul li a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            transition: 0.2s;
+        }
+
+        .side-menu ul li a:hover {
+            background-color: #555;
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            var sideMenu = document.querySelector(".side-menu");
+            if (sideMenu.style.left === "0px" || sideMenu.style.left === "") {
+                sideMenu.style.left = "-250px";
+            } else {
+                sideMenu.style.left = "0px";
+            }
+        }
+
+        // Close the side menu when clicking anywhere outside of it
+        document.addEventListener("click", function (event) {
+            var sideMenu = document.querySelector(".side-menu");
+            var menuButton = document.querySelector(".menu-button");
+            if (
+                event.target !== sideMenu &&
+                event.target !== menuButton &&
+                !sideMenu.contains(event.target) &&
+                !menuButton.contains(event.target)
+            ) {
+                sideMenu.style.left = "-250px";
+            }
+        });
+    </script>
+</head>
+<body>
+    <section id="section1">
+    <div class="container">
+        <div class="menu-button" onclick="toggleMenu()">
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+        </div>
+        <div class="side-menu">
+            <ul>
+                <li><a href="#"><i class="fa-regular fa-address-card"></i>Dashboard</a></li>
+                    <li><a href="#"><i class="fa-regular fa-user"></i>Profile</a></li>
+                    <li><a href="#"><i class="fa-solid fa-circle-info"></i>About Us</a></li>
+                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i>Overview</a></li>
+                    <li><a href="#"><i class="fa-solid fa-bell"></i>Notification</a></li>
+                    <li><a href="#"><i class="fa-regular fa-address-card"></i>Services</a></li>
+                    <li><a href="#"><i class="fa-solid fa-phone"></i>Contact Us</a></li>
+                    <li><a href="#"><i class="fa-solid fa-headset"></i>Support</a></label>
+                    <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+</body>
+</html>

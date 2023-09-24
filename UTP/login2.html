@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Responsive Webpage</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+section {
+  padding: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+  </style>
+
+  <script>
+    document.getElementById("submitBtn").addEventListener("click", function() {
+  alert("Button clicked!");
+});
+
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>Responsive Webpage</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Welcome to our responsive webpage!</h2>
+    <p>This webpage is designed to adapt to different screen sizes, providing a seamless user experience.</p>
+    <form action="store_data.php" method="post">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="submit" value="Submit">
+    </form>
+    
+    <button id="submitBtn">Submit</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2021 Your Website. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

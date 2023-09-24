@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A - Undertrial Prisoners</title>
+    
+    <style>
+        body {
+    background-image: url('court.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    transition: background-image 0.5s; /* Add background image transition */
+}
+
+.dashboard-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add button background color transition */
+}
+
+.dashboard-button:hover {
+    background-color: #ff4500;
+}
+
+.menu {
+    position: absolute;
+    top: 40px;
+    left: -200px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    transition: left 0.3s;
+}
+
+.menu a {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s; /* Add link color transition */
+}
+
+.menu a:hover {
+    color: #ff4500;
+}
+
+.qa-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    transition: box-shadow 0.3s; /* Add box shadow transition */
+}
+
+.qa-item {
+    margin-bottom: 20px;
+}
+
+.question {
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.answer {
+    color: #555;
+    display: none;
+    transition: display 0.3s; /* Add answer display transition */
+}
+
+/* Add more CSS animations and transitions as needed */
+
+    </style>
+</head>
+<body>
+    <div class="dashboard-button" id="dashboard-button">=</div>
+    <div class="menu" id="menu">
+        <a href="my_account.html">Home</a>
+        <a href="#" id="login-link">Login</a>
+        <a href="#" id="signup-link">Signup</a>
+        <a href="#" id="prisoner-details-link">Prisoner Details</a>
+        <a href="Q&A.html">Q & A</a>
+        <a href="Notification Center.html">Notification Center</a>
+        <a href="share this app.html">Share this app</a>
+        <a href="rate this app.html">Rate this app</a>
+        <a href="about.html">About</a>
+        <div id="welcome-message">
+            <!-- The "Welcome to my website" message will be displayed here -->
+        </div>
+    </div>
+    
+    <div class="qa-section" id="qa-section">
+        <h2>Q&A - Undertrial Prisoners</h2>
+
+        <!-- Question 1 -->
+        <div class="qa-item">
+            <h3 class="question">Q1: What are undertrial prisoners?</h3>
+            <p class="answer">A1: Undertrial prisoners are individuals who have been arrested and are awaiting trial or the completion of legal proceedings. They have not been convicted of a crime.</p>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="qa-item">
+            <h3 class="question">Q2: What rights do undertrial prisoners have?</h3>
+            <p class="answer">A2: Undertrial prisoners have the right to a fair and speedy trial, legal representation, and humane treatment while in custody. They are considered innocent until proven guilty.</p>
+        </div>
+
+        <!-- Add more questions and answers as needed -->
+    </div>
+
+    <div class="login-form" id="login-form">
+        <h2>Login</h2>
+        <form action="your_server_login_script.php" method="POST">
+            <input type="text" name="username" placeholder="Username" required class="form-input">
+            <input type="password" name="password" placeholder="Password" required class="form-input">
+            <button type="submit" class="form-button">Login</button>
+        </form>
+    </div>
+
+    <div class="signup-form" id="signup-form">
+        <h2>Signup</h2>
+        <form action="your_server_signup_script.php" method="POST">
+            <input type="text" name="name" placeholder="Name" required class="form-input">
+            <input type="text" name="address" placeholder="Address" required class="form-input">
+            <select name="gender" required class="form-input">
+                <option value="gender">Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="number" name="age" placeholder="Age" required class="form-input">
+            <select name="Relation" required class="form-input">
+                <option value="Relation">Relation</option>
+                <option value="aunt">Aunt</option>
+                <option value="brother">Brother</option>
+                <!-- Add other options as needed -->
+            </select>
+            <input type="text" name="identity_proof" placeholder="Identity Proof" required class="form-input">
+            <select name="identity_proof_type" required class="form-input">
+                <option value="aadhar_id">AADHAR ID</option>
+                <option value="driving_license">Driving License</option>
+                <option value="pan_card">PAN card</option>
+                <option value="voter_id">Voter ID</option>
+                <option value="none">None</option>
+            </select>
+            <input type="email" name="email" placeholder="Email Address" required class="form-input">
+            <input type="tel" name="phone" placeholder="Phone Number" required class="form-input">
+            <button type="submit" class="form-button">Signup</button>
+        </form>
+    </div>
+
+    <div class="prisoner-details-form" id="prisoner-details-form">
+        <h2>Prisoner Details</h2>
+        <form action="your_server_prisoner_details_script.php" method="POST">
+            <input type="text" name="prisoner-name" placeholder="Name" required class="form-input">
+            <input type="text" name="prisoner-address" placeholder="Address" required class="form-input">
+            <input type="tel" name="prisoner-phone" placeholder="Phone Number" required class="form-input">
+            <button type="submit" class="form-button">Submit</button>
+        </form>
+    </div>
+
+    <div id="signup-success-message" style="display: none;">
+        Signup Successful! You can now <a href="#" id="login-link">Login</a>.
+    </div>
+
+    <script>
+        const dashboardButton = document.getElementById('dashboard-button');
+        const menu = document.getElementById('menu');
+        const loginLink = document.getElementById('login-link');
+        const signupLink = document.getElementById('signup-link');
+        const prisonerDetailsLink = document.getElementById('prisoner-details-link');
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const prisonerDetailsForm = document.getElementById('prisoner-details-form');
+        const welcomeMessage = document.getElementById('welcome-message');
+        const qaItems = document.querySelectorAll('.qa-item');
+
+        dashboardButton.addEventListener('click', () => {
+            if (menu.style.left === '0px') {
+                menu.style.left = '-200px';
+            } else {
+                menu.style.left = '0px';
+            }
+        });
+
+        loginLink.addEventListener('click', () => {
+            loginForm.style.display = 'block';
+            signupForm.style.display = 'none';
+            prisonerDetailsForm.style.display = 'none';
+        });
+
+        signupLink.addEventListener('click', () => {
+            signupForm.style.display = 'block';
+            loginForm.style.display = 'none';
+            prisonerDetailsForm.style.display = 'none';
+        });
+
+        prisonerDetailsLink.addEventListener('click', () => {
+            prisonerDetailsForm.style.display = 'block';
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'none';
+        });
+
+        qaItems.forEach((item) => {
+            const question = item.querySelector('.question');
+            const answer = item.querySelector('.answer');
+
+            question.addEventListener('click', () => {
+                answer.classList.toggle('visible');
+            });
+        });
+    </script>
+</body>
+</html>

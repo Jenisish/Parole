@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>FreeDom Mate</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Signika+Negative:wght@500&display=swap"
+            rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
+            <!-- <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+        <script src="https://mediafiles.botpress.cloud/556f1531-288a-4202-b0f6-cffcd2a24c65/webchat/config.js" defer></script> -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            /* overflow: hidden; */
+        }
+
+        
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .menu-button {
+            position: fixed;
+            cursor: pointer;
+            padding: 40px;
+            background-color: #000000;
+            background: transparent;
+            color: #fff;
+        }
+
+        .menu-icon {
+            /* position: fixed; */
+            width: 30px;
+            height: 3px;
+            background: linear-gradient(90.36deg,#63d6f7 29.42%,#94f0db 50.67%,#adb7f7 73.23%);
+            margin: 5px 0;
+        }
+
+        .side-menu {
+            position: fixed;
+            
+            top: 0;
+            height: 100%;
+            width: 350px;
+            background-color: #000000;
+            /* filter: blur(30%); */
+            overflow-x: hidden;
+            transition: 0.3s;
+        }
+
+        .side-menu ul {
+            list-style: none;
+            padding: 25px;
+        }
+
+        .side-menu ul li {
+            padding: 4px;
+            text-align: center;
+        }
+
+        .side-menu ul li a {
+            text-decoration: none;
+            line-height: 85px;
+            font-size: 20px;
+            padding-left: 14px;
+            box-sizing: border-box;
+            border-top: 1px solid rgba(255, 255, 255, .1);
+            border-bottom: 1px solid black;
+            color: #fff;
+            display: block;
+            transition: 0.2s;
+        }
+
+        #side-menu ul li a i{
+            padding-right:12px ;
+        }
+
+        .side-menu ul li a:hover {
+            background-color: #555;
+            border-radius: 44px;
+        }
+        
+        #section1{
+            background: linear-gradient(90deg, #000000, #2d2d2d);
+            /* background-image: url('/UTP/court.jpg'); */
+            background-size: cover;
+            
+            color: #ffffff; 
+            max-width: 100%;
+            height: 825px;
+            /* max-height: 100%; */
+        }
+
+        #writing-part{
+            margin-left: 10rem;
+            /* margin: 150px; */
+            display: inline-block;
+            margin-top: -37px;
+            /* margin: 150px; */
+        }
+        #writing-part h4 {
+            /* background: linear-gradient(90deg, #eec5bd, #f3b1a5 35%, #c6caf6 72%, #dad9e9); */
+            /* background: linear-gradient(90deg, #000000, #eec5bd 35%, #f3b1a5 72%, #c6caf6); */
+            /* background: linear-gradient(90.36deg,#63d6f7 29.42%,#83f7db 50.67%,#4e66fa 73.23%); */
+            /* background: linear-gradient(90deg,#4fce99,#0c86bd); */
+            /* background: linear-gradient(60deg, #E21143, #FFB03A); */
+            /* background: linear-gradient(243.87deg,#91cefd 2.04%,#91cdfd 2.69%,#92ccfd 3.34%,#92cafc 4%,#93c9fc 4.65%,#93c8fc 5.3%,#93c8fc 0,#93c7fc 5.95%,#94c6fc 6.6%,#94c5fc 7.26%,#95c4fc 7.91%,#95c3fc 8.56%,#95c3fc 0,#95c2fc 9.21%,#96c1fc 9.86%,#96c0fb 10.52%,#97bffb 11.17%,#97befb 11.82%,#97befb 0,#97bdfb 12.47%,#98bcfb 13.12%,#98bbfb 13.78%,#99bafb 14.43%,#99b9fb 15.08%,#99b9fb 0,#99b8fb 15.73%,#9ab7fb 16.38%,#9ab7fa 17.04%,#9bb6fa 17.69%,#9bb5fa 18.34%,#9bb5fa 0,#9bb5fa 0,#9bb5fa 0,#9bb5fa 0,#9bb5fa 0,#9bb5fa 0,#9bb5fa 0,#9bb4fa 18.99%,#9cb3fa 19.64%,#9cb3f9 20.3%,#9db2f9 20.95%,#9db1f9 21.6%,#9db1f9 0,#9db0f9 22.25%,#9eaff9 22.91%,#9eaff9 23.56%,#9faef9 24.21%,#9fadf9 24.86%,#9fadf9 0,#9facf9 25.51%,#9facf9 26.17%,#a0abf8 26.82%,#a0abf8 27.47%,#a0aaf8 28.12%,#a0aaf8 0,#a0a9f8 28.77%,#a1a9f8 29.43%,#a1a8f8 30.08%,#a2a8f8 30.73%,#a2a7f8 31.38%,#a2a7f8 0,#a2a6f8 32.03%,#a3a6f8 32.69%,#a3a5f7 33.34%,#a4a5f7 33.99%,#a4a4f7 34.64%,#a4a4f7 0,#a4a4f7 0,#a4a4f7 0,#a4a4f7 0,#a4a4f7 0,#a4a4f7 0,#a4a4f7 0,#a5a4f7 35.29%,#a7a5f7 35.95%,#a8a5f7 36.6%,#aaa6f7 37.25%,#aba6f7 37.9%,#aba6f7 0,#aca6f7 38.55%,#ada7f7 39.21%,#afa7f6 39.86%,#b0a8f6 40.51%,#b1a8f6 41.16%,#b1a8f6 0,#b2a8f6 41.81%,#b3a8f6 42.47%,#b5a9f6 43.12%,#b6a9f6 43.77%,#b7a9f6 44.42%,#b7a9f6 0,#b8a9f6 45.08%,#b9aaf6 45.73%,#bbaaf5 46.38%,#bcabf5 47.03%,#bdabf5 47.68%,#bdabf5 0,#beabf5 48.34%,#bfacf5 48.99%,#c0acf5 49.64%,#c1adf5 50.29%,#c2adf5 50.94%,#c2adf5 0,#c2adf5 0,#c2adf5 0,#c2adf5 0,#c2adf5 0,#c2adf5 0,#c2adf5 0,#c3adf5 51.6%,#c4aef5 52.25%,#c5aef5 52.9%,#c6aff5 53.55%,#c7aff5 54.2%,#c7aff5 0,#c8aff5 54.86%,#c9aff5 55.51%,#cab0f4 56.16%,#cbb0f4 56.81%,#ccb0f4 57.46%,#ccb0f4 0,#cdb0f4 58.12%,#ceb1f4 58.77%,#ceb1f4 59.42%,#cfb2f4 60.07%,#d0b2f4 60.72%,#d0b2f4 0,#d1b2f4 61.38%,#d2b2f4 62.03%,#d3b3f3 62.68%,#d4b3f3 63.33%,#d5b3f3 63.98%,#d5b3f3 0,#d6b3f3 64.64%,#d7b4f3 65.29%,#d7b4f3 65.94%,#d8b5f3 66.59%,#d9b5f3 67.24%,#d9b5f3 0,#d9b5f3 0,#d9b5f3 0,#d9b5f3 0,#d9b5f3 0,#d9b5f3 0,#d9b5f3 0,#dab5f3 67.9%,#dbb6f3 68.55%,#dbb6f3 69.2%,#dcb7f3 69.85%,#ddb7f3 70.51%,#ddb7f3 0,#deb7f3 71.16%,#dfb7f3 71.81%,#dfb8f3 72.46%,#e0b8f3 73.11%,#e1b8f3 73.77%,#e1b8f3 0,#e2b8f3 74.42%,#e2b9f3 75.07%,#e3b9f2 75.72%,#e3baf2 76.37%,#e4baf2 77.03%,#e4baf2 0,#e5baf2 77.68%,#e6baf2 78.33%,#e6bbf2 78.98%,#e7bbf2 79.63%,#e8bbf2 80.29%,#e8bbf2 0,#e9bbf2 80.94%,#e9bcf2 81.59%,#eabcf2 82.24%,#eabdf2 82.89%,#ebbdf2 83.55%); */
+            background-image: linear-gradient(45deg, #1d8af7, #7a8cd6 50%, #f7861d);
+            background-clip: text;
+            -webkit-background-clip: text; /* For Safari/WebKit */
+            color: transparent;
+  
+    
+            font-family: 'Signika Negative', sans-serif;
+            font-size: 50px;
+            
+        }
+
+        #intro-text{
+            margin: 0;
+            color: #87888b;
+            font-weight: bold;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 75px;
+    }
+
+    #intro-para{
+        font-size: 27px;
+        font-family: 'Barlow Condensed', sans-serif;
+    }
+
+        /* #notification{
+            left: auto;
+            right: 0px;
+        } */
+
+        #log{
+            font-family: 'Barlow Condensed', sans-serif;
+           font-size: 30px;
+           font-weight: 50px;
+           text-decoration: none;
+           color: #fff;
+           background-color: #00ff2f;
+           margin-top: 52px;
+            padding: 12px;
+            border-radius: 25px;
+        }
+        #log a{
+            
+            font-family: 'Barlow Condensed', sans-serif;
+            
+           text-decoration: none;
+           color: #000000;
+        }
+        #log:hover{
+           
+           
+           background-color: #4ee46a;
+           
+        }
+        
+
+        #section2{
+            background: linear-gradient(90deg, #000000, #272626);
+            /* background-image: url('/UTP/start.jpg'); */
+            background-size: cover; 
+            color: #ffffff; 
+            max-width: 100%;
+            max-height: 100%;
+            margin-top: -22px;
+            
+         } 
+
+         /* #notification {
+            position: relative;
+        } */
+
+            #notification a {
+                
+                 position: absolute;
+                 top: 30px;
+                right: 33px;
+                font-size: 45px;
+                filter: invert(49%); 
+                color: #ffffff;
+            } 
+
+
+         /* #notification a{
+            /* display: inline-block; */
+            /* filter: invert(49%); */
+            /* bottom: 39rem; */
+            /* left: 50rem; */
+            /* right: 20px; */
+            /* font-size: 50px; */
+            
+            
+         /* } */ 
+         /* #notification a i{
+            top: 10px;
+            bottom: 10px;
+
+         } */
+
+         #writing-part2 h4{
+            margin: 12px;
+            padding: 56px 101px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 50px;
+            background: linear-gradient(90deg, #eec5bd, #f3b1a5 35%, #c6caf6 72%, #dad9e9); 
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+         }
+
+         #writing-part2 p{
+            margin: 95px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 25px;
+            /* text-align: center; */
+            /* align-items: center; */
+            /* width: 30rem; */
+            /* width: 50rem; */
+             /* background: linear-gradient(90deg, #eec5bd, #f3b1a5 35%, #c6caf6 72%, #dad9e9); */
+         }
+        
+         #boxes1 , #boxes2 , #boxes3{
+            height: 600px;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 40px;
+        }
+
+        .information{
+            margin: 50px auto auto auto;
+        }
+        #features1 h4 , #features2 h4 , #features3 h4{
+            font-family: 'Signika Negative', sans-serif;
+            /* margin: 20px; */
+            font-size: 40px;
+        }
+
+        #para-1 , #para-2 , #para-3{
+            font-size: 20px;
+            font-family: 'Barlow Condensed', sans-serif;
+        }  
+
+        #para1-image img , #para2-image img , #para3-image img{
+            margin: 10px;
+            padding: 10px;
+            border-radius: 20px;
+            height: 400px;
+            width: 700px;
+        }
+        
+        #features2{
+            margin: 50px auto auto 100px;
+        }
+
+         #section3{
+            background-color:linear-gradient(90deg, #000000, #272626) ;
+            background-size: cover;
+            height: 825px;
+            max-width: 100%;
+         }
+
+        #part3{
+            display: flex;
+         }
+
+         #writing-part3{
+            margin: 8rem;
+            text-align: left;
+         }
+         #writing-part3 p{
+            font-size: 15px;
+         }
+
+         #img-source img{
+            margin: 8rem;
+            height: 500px;
+            width: 600px;
+         }
+
+         #part4{
+            display: flex;
+            /* justify-content: space-around; */
+         }
+
+         #section4{
+            background: linear-gradient(90deg, #000000, #272626); 
+            background-size: cover;
+            /* max-width: 100%; */
+            height: 825px;
+
+         }
+
+         #img-source4 img{
+            margin: 8rem;
+            height: 500px;
+            width: 600px; 
+         }
+
+         #writing-part4 h4{
+            margin-top: 8rem;
+            margin-bottom: 6rem;
+            color: #e7c966;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+         }
+
+         #writing-part4 h5{
+            margin-top: 8rem;
+            margin:1px 0px;
+            color: #e7d068;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+            
+         }
+         
+         #writing-part4 h6{
+            margin-top: 8rem;
+            margin:1px 0px;
+            color: #e7d068;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+            
+         }
+         
+         #writing-part4 p a{
+            text-decoration: none;
+            color: #ffffff;
+            /* margin-bottom: 1px; */
+         }
+         .mail{
+            
+            margin-bottom: 70px;
+         }
+
+         .contact a{
+            margin: 0px 13px 50px 13px;
+         }
+
+         .thankyou{
+
+            color: #ffffff;
+            width: 20rem;
+            margin-top: 70px;
+         }
+
+    </style>
+
+        <script>
+        function toggleMenu() {
+            var sideMenu = document.querySelector(".side-menu");
+            if (sideMenu.style.left === "0px" || sideMenu.style.left === "") {
+                sideMenu.style.left = "-250px";
+            } else {
+                sideMenu.style.left = "0px";
+            }
+        }
+
+        // Close the side menu when clicking anywhere outside of it
+        document.addEventListener("click", function (event) {
+            var sideMenu = document.querySelector(".side-menu");
+            var menuButton = document.querySelector(".menu-button");
+            if (
+                event.target !== sideMenu &&
+                event.target !== menuButton &&
+                !sideMenu.contains(event.target) &&
+                !menuButton.contains(event.target)
+            ) {
+                sideMenu.style.left = "-350px";
+            }
+        });
+    </script>
+    </head>
+    <body>
+        <section id="section1">
+
+            <div class="container">
+                <div class="menu-button" onclick="toggleMenu()">
+                    <div class="menu-icon"></div>
+                    <div class="menu-icon"></div>
+                    <div class="menu-icon"></div>
+                </div>
+                <div class="side-menu">
+                    <ul>
+                        <li><a href="#"><i class="fa-regular fa-address-card"></i>Dashboard</a></li>
+                        <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+                        <!-- <li><a href="#"><i class="fa-regular fa-user"></i>Profile</a></li> -->
+                        <li><a href="#section2"><i class="fa-solid fa-circle-info"></i>About
+                                Us</a></li>
+                        <li><a href="#"><i class="fa-solid fa-message"></i>Queries(Q & A)</a></li>
+                        <!-- <li><a href="#"><i class="fa-solid fa-bell"></i>Notification</a></li> -->
+                        <li><a href="#"><i class="fa-regular fa-address-card"></i>Services</a></li>
+                        <!-- <li><a href="#"><i class="fa-solid fa-phone"></i>Contact -->
+                        <!-- Us</a></li> --><li><a href="#"><i
+                        class="fa-solid fa-right-from-bracket"></i>Login</a></label>
+                        <li><a href="#"><i class="fa-solid fa-headset"></i>Support</a></label>
+                        
+                        <!-- <li><a href="#"><i -->
+                        <!-- class="fa-solid fa-right-from-bracket"></i>Log -->
+                        <!-- Out</a></li> -->
+                    </ul>
+                </div>
+
+            
+
+            </div>
+
+        </div>
+
+        <div id="writing-part">
+            <h4><i>Parole</i></h4>
+            <p id="intro-text">Empowering <br>
+                Undertrial<br>
+                Prisoners with <br>
+                Legal Aid.<br></p>
+            <p id="intro-para">Parole provides a comprehensive platform to support <br>
+                undertrial prisoners with legal aid features and resources.</p>
+
+            <button onclick="UserLogin()" id="log"><a href="login.html"><b>Sign Up
+                    Prisoner</b></a></button><br>
+        </div>
+
+        <div id="notification">
+            <a href="notification.html"><i class="fa-solid fa-bell"></i></a>
+
+        </div>
+
+    </section>
+
+        <section id="section2">
+
+            <div id="writing-part2">
+                <h4><i>About Our Firm</i></h4>
+                <p>Our mission is to transform prison management and prisoner welfare through technology.
+                    We aim to provide a unified platform that offers real-time access to vital information 
+                    and services for prison officials and stakeholders. By streamlining processes and 
+                    enhancing transparency, we seek to make prison administration more efficient and accountable. 
+                    Additionally, our commitment to prisoner welfare drives us to implement innovative solutions, 
+                    including educational, vocational, and mental health programs, 
+                    to improve the lives of inmates and reduce recidivism rates. 
+                    Our vision is to create a correctional system that prioritizes efficiency, 
+                    transparency, and rehabilitation, ultimately leading to safer communities 
+                    and a more humane society.</p>
+            </div>
+            <div id="boxes1">
+                <div id="features1" class="information">
+                    <h4>Access to legal aid</h4>
+    
+                    <p id="para-1">
+                        Our Platform connects under trial prisoners with legal aid
+                        services, ensuring they have proper representation and
+                        support during their legal proceedings.
+    
+                    </p>
+                </div>
+                <div id="para1-image">
+                    <img src="/UTP/img10.jpg" alt="Reload">
+                </div>
+            </div>
+    
+            <div id="boxes2">
+                <div id="para2-image">
+                    <img src="/UTP/img11.jpg" alt="Reload">
+                </div>
+                <div id="features2" class="information">
+                    <h4>Pro bono lawyers</h4>
+                    <p id="para-2">Our platform offers access to pro bono lawyers
+                        who are
+                        committed to providing legal assistance to under trial
+                        prisoners at no cost.</p>
+                </div>
+            </div>
+    
+            <div id="boxes3">
+                <div id="features3" class="information">
+                    <h4>Rehabilitation programs</h4>
+                    <p id="para-3">Our Platform provides access to rehabilitation programs
+                         to help under trial prisoners reintegrate into 
+                         society and rebuild their lives.</p>
+                </div>
+                <div id="para3-image">
+                    <img src="/UTP/img12.jpg" alt="Reload">
+                </div>
+    
+            </div>
+    
+
+        </section>
+
+        <section id="section3">
+            <div id="part3">
+                <div id="writing-part3">
+                    <p>Our mission is to provide a unified platform for
+                        efficient and transparent management of prisons and
+                        prisoners, enabling prison officials and stakeholders to
+                        access real-time information and services. We aim to
+                        improve the overall quality of prison management and
+                        prisoner welfare by leveraging technology.</p>
+                    <ul>
+                        <li><b>SaaS Application:</b> Hosted on the NIC Cloud,
+                            our application offers high availability and
+                            scalability.</li>
+                        <li><b>User-Friendly GUI:</b> Our application features
+                            an intuitive graphical user interface (GUI) to
+                            enhance user adoption.</li>
+                        <li><b>Integration Capabilities:</b> We provide
+                            essential services to seamlessly integrate with
+                            various stakeholders in the Criminal Justice System.</li>
+                        <li><b> SMS and Email Alerts:</b> Stay informed with
+                            real-time alerts and notifications for various
+                            events and activities.</li>
+                        <li><b>Real-Time Alerts:</b> Stay informed with instant
+                            SMS and email notifications for important events and
+                            activities.</li>
+                    </ul>
+                </div>
+                <div id="img-source">
+                    <img src="/UTP/img2.jpg" alt="Reload Required">
+                </div>
+            </div>
+
+        </section>
+
+        <section id="section4">
+            <div id="part4">
+                <div id="img-source4">
+                    <img src="/UTP/img4.jpg" alt="reload Required">
+                </div>
+                <div id="writing-part4">
+                    <h4>
+                        Get In Touch
+                    </h4>
+
+                    <h5>
+                        Email<i class="fa-regular fa-envelope"></i>
+                    </h5>
+                    <p class="mail">
+
+                        <a href="mailto:mulpurujenisish@gmail.com">parole@gmail.com</a>
+                    </p>
+
+                    <h6>
+                        Social
+                    </h6>
+                    <p class="contact">
+                        <a href><i class="fa-brands fa-facebook"></i></a><a href><i
+                                class="fa-brands fa-instagram"></i></a><a href><i
+                                class="fa-brands fa-twitter"></i></a>
+                    </p>
+
+                    <p class="thankyou">
+                        Thank you for choosing the Undertrial Prisoners
+                        Application for efficient prison management and prisoner
+                        welfare. We are committed to enhancing the criminal
+                        justice system's effectiveness through technology and
+                        innovation.
+                    </p>
+
+                </div>
+            </div>
+
+        </section>
+    </body>
+</html>

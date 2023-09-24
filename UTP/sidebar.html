@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide-in Sidebar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: -250px; /* Initially, hide the sidebar off-screen */
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            transition: left 0.3s;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .toggle-btn {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+
+        .toggle-btn::before {
+            content: "\2630"; /* Hamburger icon */
+            font-size: 30px;
+            color: white;
+        }
+
+        .sidebar.active {
+            left: 0; /* Slide the sidebar in when active */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <!-- Sidebar content goes here -->
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="toggle-btn" onclick="toggleSidebar()"></div>
+            <h1>Main Content</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla turpis eget libero consequat, id volutpat nisi tincidunt.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

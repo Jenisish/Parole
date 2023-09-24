@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Website</title>
+    <style>
+        body {
+            background-image: url('court.jpg'); /* Replace 'your-image.jpg' with the path to your image file */
+            background-size: cover; /* Adjust as needed */
+            background-repeat: no-repeat; /* Prevent image from repeating */
+            background-attachment: fixed; /* Keep the background fixed while scrolling */
+            color: #fff;
+		}
+    </style>
+</head>
+<body>
+
+    <button id="dashboard-button">About Us</button>
+    <div id="menu" style="left: -200px;"> <!-- Initially hidden -->
+ <p>
+The Scope of this project is to computerize and integrate all the activities related to prison and prisoner management in the jail. This application suite will provide the vital information about the inmates, lodged in the prisons, in real time environment to the prison officials and other entities, involved in Criminal Justice System. It will also facilitate online visit request and grievance redressal.
+
+ePrisons application suite, developed by NIC, is cloud based product designed with easy to use GUI and embedded with a comprehensive security features. It can be easily adopted by any state prisons department with minimum customization efforts since all the possible customization features are parameterized and can be configured by the users. This application suite consists of three main products:
+<br><br>
+1. ePrisons MIS : Management Information System used at the prisons for their day to day regular activities; The major modules of ePrisons MIS are:
+
+Prisoner Information Management System (PIMS);
+Visitor Management System (eVisitor);
+Hospital Management System (eHospital);
+Legal Aid Management System;
+Inventory Management System;
+Prison Management System (PMS);
+Police Intelligence System;
+Court Monitoring; and
+Kiosk Information.
+<br><br>
+2. NPIP: National Prisons Information Portal is a citizen centric portal showing statistical data of various prisons in the country
+
+Visitors can book there visit request to meet their ward inside the prison through this portal;
+Grievances with respect to their wards inside the prisons can also submitted through the portal; and
+This portal also provides with inmate tracking facilities in a secured way to various investigating agencies.
+<br><br>
+3. Kara Bazaar: Portal for showcasing and selling the products manufactured in various prisons of the country by inmates.
+
+Necessary platform required for on boarding for all the state prison departments are in place.
+<br><br>
+Key Features:
+<br><br>
+Available as SaaS from the NIC Cloud, which provides high availability, scalable and robust system to the users;
+The solution is ready to adopted by any prison / stakeholder for free.
+Parameterized and configurable gap aspects;
+SMS and email alerts;
+Equipped with necessary services required for integrating with other Criminal Justice System stakeholders; and
+Authorization checks & validation to improve the data quality.
+<br><br>
+Services - To the Public:
+<br><br>
+Registration of visit request and Status query of that request;
+SMS/eMail Alerts to the visitors;
+Statistical information / drilled down Reports on national basis;
+Sumission of grievance; and
+KaraBazaar
+<br><br>
+Services - To the Prisons:
+<br><br>
+Controlled registration of prisoners (checking duplicity of prisoner’s entry to the jail);
+Recording and tracking their movement activities and their management throughout their term inside the prison;
+Well structured information about Availability of various reports (daily/Monthly) for administrative purpose;
+Graphical and statistical reports for monitoring and informational purpose;
+Enables the prison management to utilize the resources optimally;
+Various alerts like Hearing, 436/436 A, parole jump, inventory, medicine etc for monitoring purpose.
+<br><br>
+Services - To the Courts:
+<br><br>
+Availability of CrPC 436 / 436 ‘A’/441 reports to court.
+Availability of Nominal roll online to the court;
+Alerts for jumping Parole/Interim Bail retrun due dates;
+Availability of other information of the prisoner online to the court on demand.
+<br><br>
+Services - To the Police, Other investigating agencies:
+<br><br>
+Nationwide search for inmates and their complete profile;
+Marking of Alert (eMail/SMS) at various events;
+Reports of list and statistical format for a period which can be drilled down to individual jails
+<br><br>
+The procedure for applying the visit request is as follows:
+<br><br>
+Prospective visitors are requested to submit the visit details in the prescribed format as shown in the Registration page. The visit details as entered (registration number, date of visit and approval status) are communicated to the visitor through SMS / eMail;
+The visit requested will be authenticated / verified by the officer to be visited through this eVisitor operational at the Ministry;
+The current approval status of the visit can also be enquired by the visitor on this website by entering Reg.No.
+The status of visit approval / change in visiting time will be communicated to the visitor through SMS / eMail;
+Visitor pass will be issued to the approved visitors after capturing a photograph at the reception counter.
+If visitor is earlier registered at least once with this eVisitor, he / she can refer his / her old registration number, mobile number or personal details for quick registration of his / her current visit at the Reception Counter.
+<br><br>
+The procedure for Submitting the grievance is as follows:
+<br><br>
+Prospective visitors are requested to submit the grievance details in the prescribed format as shown in the Grievance page. The Complaint details as entered (Name,Mobile number and Relation with Inmate) and Grievance details (Stae, Jail ,Prisoner name, age, gender, Grievance category and message) is submitted by the visitors.
+The Grievance will be authenticated / verified by the officer through this -----
+The current approval status of the grievance can also be enquired by the visitor on this website by entering Request Number
+The status of Grievance will be communicated to the visitor through SMS / eMai
+l;
+Visitor pass will be issued to the approved visitors after capturing a photograph at the reception counter.
+If visitor is earlier registered at least once with this portal, he / she can refer his / her old request number, mobile number or personal details for quick submission of his / her grievance..
+The procedure for Tracking Inmates the grievance is as follows:
+
+Citizen can search their relatives in correctional homes. Only authorized person can search the data base.
+There is login id and password given to the authorised user.
+</p>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blank Webpage</title>
+    
+    <style>
+        body {
+            background-image: url('court.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dashboard-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dashboard-button:hover {
+            background-color: #ff4500;
+        }
+
+        .menu {
+            position: absolute;
+            top: 40px;
+            left: -200px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            transition: left 0.3s;
+        }
+
+        .menu a {
+            display: block;
+            margin-bottom: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .login-form, .signup-form, .visitor-details-form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-button" id="dashboard-button">=</div>
+    <div class="menu" id="menu">
+        <a href="my_account.html">Home</a>
+        <a href="#" id="login-link">Login</a>
+        <a href="#" id="signup-link">Signup</a>
+        <a href="#" id="visitor-details-link">Visitor Details</a> <!-- Updated link -->
+        <a href="Q&A.html">Q & A</a>
+        <a href="notification.html" target="_blank">Notification Center</a>
+        <a href="about.html">About</a>
+		<div id="welcome-message">
+            <!-- The "Welcome to my website" message will be displayed here -->
+        </div>
+	</div>
+    
+    <div class="login-form" id="login-form">
+        <h2>Login</h2>
+        <form action="your_server_login_script.php" method="POST">
+            <input type="text" name="username" placeholder="Username" required class="form-input">
+            <input type="password" name="password" placeholder="Password" required class="form-input">
+            <button type="submit" class="form-button">Login</button>
+        </form>
+    </div>
+
+    <div class="signup-form" id="signup-form">
+        <h2>Signup</h2>
+        <form action="your_server_signup_script.php" method="POST">
+		    <input type="text" name="name" placeholder="Name" required class="form-input">
+            <input type="text" name="address" placeholder="Address" required class="form-input">
+            <select name="gender" required class="form-input">
+                <option value="gender">Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="number" name="age" placeholder="Age" required class="form-input">
+            <select name="Relation" required class="form-input">
+                <option value="Relation">Relation</option>
+                <option value="aunt">Aunt</option>
+                <option value="brother">Brother</option>
+                <option value="brother_in_law">Brother-In-Law</option>
+                <option value="cousin">Cousin</option>
+                <option value="daughter">Daughter</option>
+                <option value="daughter_in_law">Daughter-In-Law</option>
+                <option value="father">Father</option>
+                <option value="father_in_law">Father-In-Law</option>
+                <option value="friend">Friend</option>
+                <option value="grand_daughter">Grand daughter</option>
+                <option value="grand_father">Grand Father</option>
+                <option value="grand_mother">Grand Mother</option>
+                <option value="grand_son">Grand Son</option>
+                <option value="husband / wife">Husband / Wife</option>
+                <option value="mother">Mother</option>
+                <option value="mother_in_law">Mother-In-Law</option>
+                <option value="neighbour">Neighbour</option>
+                <option value="nephew">Nephew</option>
+                <option value="others">Others</option>
+                <option value="sister_in_law">Sister</option>
+                <option value="Sister-In-Law">Sister-In-Law</option>
+                <option value="son">Son</option>
+                <option value="son_in_law">Son-In-Law</option>
+                <option value="uncle">Unlce</option>
+            </select>
+      
+            <select name="identity_proof_type" required class="form-input">
+                 <option value="aadhar_id">Identity Proof</option>
+			   <option value="aadhar_id">AADHAR ID</option>
+                <option value="driving_license">Driving License</option>
+                <option value="pan_card">PAN card</option>
+                <option value="voter_id">Voter ID</option>
+                <option value="none">None</option>
+            </select>
+            <input type="email" name="email" placeholder="Email Address" required class="form-input">
+            <input type="tel" name="phone" placeholder="Phone Number" required class="form-input">
+            <button type="submit" class="form-button">Signup</button>
+        </form>
+    </div>
+            <!-- Signup form fields here -->
+    
+    <div class="visitor-details-form" id="visitor-details-form">
+        <h2>Visitor Details</h2>
+        <form action="your_server_visitor_details_script.php" method="POST">
+            <input type="text" name="name-of-the-visitor" placeholder="Name of the Visitor" required class="form-input">
+            <select name="select-state" required class="form-input">
+                <option value="select-state">Select State</option>
+                <option value="andhra pradesh">Andhra radesh</option>
+                <option value="arunachal pradesh">Arunachal Pradesh</option>
+                <option value="assam">Assam</option>
+                <option value="bihar">Bihar</option>
+                <option value="chhattisgarh">Chhattisgarh</option>
+                <option value="goa">Goa</option>
+                <option value="gujarat">Gujarat</option>
+                <option value="haryana">Haryana</option>
+                <option value="himachal pradesh">Himachal Pradesh</option>
+                <option value="jharkhand">Jharkhand</option>
+                <option value="karnataka">Karnataka</option>
+                <option value="kerala">Kerala</option>
+                <option value="madhya pradesh">Madhya Pradesh</option>
+                <option value="maharashtra">Maharashtra</option>
+                <option value="manipur">Manipur</option>
+                <option value="meghalaya">Meghalaya</option>
+                <option value="mizoram">Mizoram</option>
+                <option value="nagaland">Nagaland</option>
+                <option value="odisha">Odisha</option>
+                <option value="punjab">Punjab</option>
+                <option value="rajastan">Rajastan</option>
+                <option value="sikkim">Sikkim"</option>
+                <option value="tamil nadu">Tamil nadu</option>
+                <option value="telangana">Telangana</option>
+                <option value="tripura">tTipura</option>
+                <option value="uttarakhand">uttarakhand</option>
+                <option value="uttar pradesh">Uttar pradesh</option>
+                <option value="west bengal">West bengal</option>
+                <!-- Add state options here -->
+            </select>
+            <input type="text" name="jail" placeholder="Jail" required class="form-input">
+            <input type="date" name="visit-date" placeholder="Visit Date" required class="form-input">
+            <input type="text" name="additional-visitors" placeholder="Additional Visitors" class="form-input">
+            <input type="text" name="visitor-name" placeholder="Visitor Name" required class="form-input">
+            <input type="text" name="father-name" placeholder="Father Name" required class="form-input">
+            <input type="number" name="visitor-age" placeholder="Visitor Age" required class="form-input">
+            <select name="visitor-gender" required class="form-input">
+                <option value="gender">Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <select name="visit-mode" required class="form-input">
+                <option value="visit-mode">Visit Mode</option>
+				 <option value="visit-mode">Physical Mode</option>
+				  <option value="visit-mode">Virtual Mode</option>
+                <!-- Add visit mode options here -->
+            </select>
+            <input type="text" name="visitor-address" placeholder="Address" required class="form-input">
+            <input type="tel" name="visitor-phone" placeholder="Phone Number" required class="form-input">
+            <button type="submit" class="form-button">Submit</button>
+        </form>
+    </div>
+
+    <div id="signup-success-message" style="display: none;">
+        Signup Successful! You can now <a href="#" id="login-link">Login</a>.
+    </div>
+
+    <script>
+        const dashboardButton = document.getElementById('dashboard-button');
+        const menu = document.getElementById('menu');
+        const loginLink = document.getElementById('login-link');
+        const signupLink = document.getElementById('signup-link');
+        const visitorDetailsLink = document.getElementById('visitor-details-link'); // Updated visitor details link
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const visitorDetailsForm = document.getElementById('visitor-details-form'); // Updated visitor details form
+        const welcomeMessage = document.getElementById('welcome-message');
+        
+        dashboardButton.addEventListener('click', () => {
+            if (menu.style.left === '0px') {
+                menu.style.left = '-200px';
+            } else {
+                menu.style.left = '0px';
+            }
+        });
+
+        loginLink.addEventListener('click', () => {
+            loginForm.style.display = 'block';
+            signupForm.style.display = 'none';
+            visitorDetailsForm.style.display = 'none'; // Hide visitor details form
+        });
+
+        signupLink.addEventListener('click', () => {
+            signupForm.style.display = 'block';
+            loginForm.style.display = 'none';
+            visitorDetailsForm.style.display = 'none'; // Hide visitor details form
+        });
+
+        visitorDetailsLink.addEventListener('click', () => {
+            visitorDetailsForm.style.display = 'block';
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'none';
+        });
+
+        const aboutLink = document.querySelector('a[href="about.html"]');
+        aboutLink.addEventListener('click', () => {
+            welcomeMessage.textContent = 'Welcome to my website!';
+        });
+		
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A: Undertrial Prisoners and Law & Justice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .qa-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+			color: #FF0000;
+        }
+
+        .answer {
+            margin-bottom: 20px;
+			color: #008000;
+        }
+
+        .search-container {
+            width: 20%;
+            max-width: 200px;
+            padding: 20px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="qa-container">
+        <div class="qa">
+            <div class="question">Q1: Who are undertrial prisoners?</div>
+            <div class="answer">A1: Undertrial prisoners are individuals who have been accused of committing a crime but have not yet been convicted by a court of law. They are awaiting trial and have not been sentenced.</div>
+        </div>
+
+        <div class="qa">
+            <div class="question">Q2: What rights do undertrial prisoners have?</div>
+            <div class="answer">A2: Undertrial prisoners have several legal rights, including the right to a fair trial, the right to legal representation, the right to remain silent, and the right to be treated with dignity and respect. They are presumed innocent until proven guilty.</div>
+        </div>
+
+        <div class="qa">
+            <div class="question">Q3: How long can undertrial prisoners be held without trial?</div>
+            <div class="answer">A3: The duration for which an undertrial prisoner can be held without trial varies by country and legal jurisdiction. In many countries, there are legal limits on the maximum period an individual can be held as an undertrial without facing trial.</div>
+        </div>
+
+        <div class="qa">
+            <div class="question">Q4: What is the role of the legal system in ensuring justice for undertrial prisoners?</div>
+            <div class="answer">A4: The legal system plays a crucial role in ensuring justice for undertrial prisoners by providing them with a fair and timely trial, legal representation, and protection of their rights. It is essential to uphold the principles of justice and the rule of law.</div>
+        </div>
+<div class="qa">
+            <div class="question">Q5: What is the difference between an undertrial prisoner and a convicted prisoner?</div>
+            <div class="answer">A5: An undertrial prisoner is someone who has been accused of a crime but has not yet been convicted by a court. A convicted prisoner, on the other hand, has been found guilty of a crime and has been sentenced by a court.</div>
+        </div>
+		
+		 		   <div class="qa">
+            <div class="question">Q6: Can undertrial prisoners be released on bail?</div>
+            <div class="answer">A6: Yes, undertrial prisoners can be released on bail if certain conditions are met. Bail is a legal process that allows a person accused of a crime to be released from custody while awaiting trial, provided they meet the bail conditions set by the court.</div>
+        </div>
+		
+				   <div class="qa">
+            <div class="question">Q7: What are the challenges faced by undertrial prisoners in the justice system?</div>
+            <div class="answer">A7: Undertrial prisoners often face challenges such as overcrowded jails, delays in the legal process, inadequate legal representation, and prolonged detention. These challenges can impact their access to justice and their rights.</div>
+        </div>
+		
+				   <div class="qa">
+            <div class="question">Q8: What is the responsibility of the state regarding undertrial prisoners?</div>
+            <div class="answer">A8: The state has a responsibility to protect the rights of undertrial prisoners, ensure they receive a fair trial, and provide humane conditions of detention. The state must also work to prevent unnecessary pretrial detention and address systemic issues in the justice system.</div>
+        </div>
+		
+				   <div class="qa">
+            <div class="question">Q9: Are there international human rights standards for the treatment of undertrial prisoners?</div>
+            <div class="answer">A9: Yes, there are international human rights standards, such as the United Nations Standard Minimum Rules for the Treatment of Prisoners (the Mandela Rules), that provide guidelines for the treatment of undertrial prisoners and their rights.</div>
+        </div>
+		
+				   <div class="qa">
+            <div class="question">Q10: How can the justice system be reformed to address the issues faced by undertrial prisoners?</div>
+            <div class="answer">A10: Justice system reforms may include measures to expedite trials, improve legal aid services, reduce pretrial detention, and address issues related to prison conditions. These reforms aim to uphold the principles of justice and protect the rights of undertrial prisoners.</div>
+        </div>
+		
+				   <div class="qa">
+            <div class="question">Q11: What are the common reasons for undertrial prisoners' prolonged detention?</div>
+            <div class="answer">A11: Prolonged detention of undertrial prisoners can be due to factors like court backlog, inadequate legal representation, delays in evidence collection, and administrative inefficiencies in the justice system</div>
+        </div>
+		
+				   <div class="qa">
+            <div class="question">Q12: How can the rights of undertrial prisoners be protected during their time in detention?</div>
+            <div class="answer">A12: The rights of undertrial prisoners can be protected by ensuring access to legal counsel, regular review of detention, adequate healthcare, and fair treatment while in custody.</div>
+        </div>
+		
+				   <div class="qa">
+            <div class="question">Q13: What is the role of legal aid organizations in assisting undertrial prisoners?</div>
+            <div class="answer">A13: Legal aid organizations play a crucial role in providing free or low-cost legal representation to undertrial prisoners who may not afford private legal counsel. They help ensure that individuals have a fair trial.</div>
+        </div>
+		
+				   <div class="qa">
+            <div class="question">Q14: Can undertrial prisoners be released if they are found not guilty during the trial?</div>
+            <div class="answer">A14: Yes, if an undertrial prisoner is found not guilty during the trial, they should be released immediately. They are entitled to their freedom as they have not been convicted of any crime.</div>
+        </div>
+		
+				   <div class="qa">
+            <div class="question">Q15: Are there international treaties addressing the rights of undertrial prisoners?</div>
+            <div class="answer">A15: Yes, international treaties such as the International Covenant on Civil and Political Rights (ICCPR) and the United Nations Standard Minimum Rules for the Treatment of Prisoners (the Mandela Rules) contain provisions related to the rights and treatment of undertrial prisoners.</div>
+        </div>
+		
+				   <div class="qa">
+            <div class="question">Q16: What measures can be taken to reduce the overcrowding of prisons with undertrial prisoners?</div>
+            <div class="answer">A16: To reduce prison overcrowding, measures may include expediting trials, implementing alternatives to detention, and reviewing and revising bail policies to allow for the release of non-violent undertrial prisoners.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q17: What is the importance of transparency and accountability in the justice system when dealing with undertrial prisoners?</div>
+            <div class="answer">A17: Transparency and accountability are crucial to ensure that the rights of undertrial prisoners are protected. It helps prevent abuse, corruption, and ensures a fair and just legal process.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q18: What rights do undertrial prisoners have during their detention?</div>
+            <div class="answer">A18: Undertrial prisoners have rights, including the right to legal representation, the right to a fair trial, the right to be treated with dignity, and the right to access medical care.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q19: Can undertrial prisoners be subjected to torture or ill-treatment?</div>
+            <div class="answer">A19: No, under no circumstances should undertrial prisoners or any prisoners be subjected to torture or ill-treatment. Such actions are violations of human rights and international law.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q20: Are there programs to rehabilitate undertrial prisoners?</div>
+            <div class="answer">A20: Yes, some prison systems offer rehabilitation programs for undertrial prisoners, including education, vocational training, and counseling to help them reintegrate into society upon release.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q21: How can the public contribute to the improvement of conditions for undertrial prisoners?</div>
+            <div class="answer">A21: The public can contribute by advocating for reforms in the justice system, supporting organizations that provide legal aid, and raising awareness about the rights and challenges of undertrial prisoners.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q22: What measures can be taken to ensure speedy trials for undertrial prisoners?</div>
+            <div class="answer">A22: Measures to ensure speedy trials may include appointing more judges, improving case management, and implementing technology to expedite court proceedings.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q23: Can undertrial prisoners be held in solitary confinement?</div>
+            <div class="answer">A23: Solitary confinement should be used sparingly and only for specific reasons, such as ensuring the safety of the prisoner or others. Prolonged or arbitrary use of solitary confinement is considered inhumane.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q24: What is the role of NGOs and civil society in advocating for the rights of undertrial prisoners?</div>
+            <div class="answer">A24: NGOs and civil society organizations play a vital role in monitoring prison conditions, advocating for policy changes, and providing support to undertrial prisoners and their families.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q25: What legal rights do undertrial prisoners have regarding bail?</div>
+            <div class="answer">A25: Undertrial prisoners have the right to apply for bail, and the court will consider factors like the nature of the offense, flight risk, and public safety when deciding on bail.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q26: How do pretrial detention practices vary between different countries?</div>
+            <div class="answer">A26: Pretrial detention practices can vary widely between countries due to differences in legal systems, cultural norms, and resources allocated to the justice system.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q27: What are the consequences of prolonged pretrial detention on individuals and their families?</div>
+            <div class="answer">A27: Prolonged pretrial detention can lead to psychological and emotional distress for individuals and financial hardships for their families due to loss of income and legal expenses.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q28: Are there international guidelines for the treatment of undertrial prisoners?</div>
+            <div class="answer">A28: Yes, international guidelines like the Bangkok Rules provide standards for the treatment of women prisoners, including those in pretrial detention.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q29: What role do judges play in ensuring the rights of undertrial prisoners?</div>
+            <div class="answer">A29: Judges play a crucial role in upholding the rights of undertrial prisoners by ensuring fair proceedings, reviewing detention regularly, and safeguarding due process.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q30: How can the use of electronic monitoring benefit undertrial prisoners?</div>
+            <div class="answer">A30: Electronic monitoring, such as ankle bracelets, can be an alternative to incarceration, allowing undertrial prisoners to await trial at home while being monitored, thus reducing the burden on prisons.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q31: Are there efforts to reform bail systems to make them more equitable?</div>
+            <div class="answer">A31: Yes, many jurisdictions are reforming their bail systems to address issues of wealth-based disparities and ensure that bail decisions are fair and based on risk assessment.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q32: What role can technology play in expediting legal processes for undertrial prisoners?</div>
+            <div class="answer">A32: Technology can help expedite legal processes through electronic filing, video conferencing for hearings, and case management systems, reducing delays in court proceedings.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q33: How can the public support organizations working to improve the rights of undertrial prisoners?</div>
+            <div class="answer">A33: The public can support such organizations through donations, volunteering, and raising awareness about the issues faced by undertrial prisoners.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q34: What are the implications of wrongful pretrial detention on the criminal justice system?</div>
+            <div class="answer">A34: Wrongful pretrial detention can undermine public trust in the justice system, lead to legal challenges, and result in compensation claims against the state.</div>
+        </div>
+		
+						   <div class="qa">
+            <div class="question">Q35: What percentage of the total prison population consists of undertrial prisoners globally?</div>
+            <div class="answer">A35: India has one of the highest numbers of undertrial prisoners in the world, with over 280,000 individuals in this category.</div>
+        </div>
+		
+		 <!-- Add more Q&A pairs related to undertrial prisoners and law & justice as needed -->
+    </div>
+
+    <div class="search-container">
+        <input type="text" class="search-input" id="search-input" placeholder="Search...">
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('search-input');
+        const qaQuestions = document.querySelectorAll('.question');
+
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+
+            qaQuestions.forEach((question) => {
+                const text = question.textContent.toLowerCase();
+                const containsTerm = text.includes(searchTerm);
+                if (containsTerm) {
+                    // Highlight the matched term
+                    const highlightedText = text.replace(searchTerm, `<span class="highlight">${searchTerm}</span>`);
+                    question.innerHTML = highlightedText;
+                } else {
+                    // Remove highlighting if not matched
+                    question.innerHTML = text;
+                }
+                question.parentElement.style.display = containsTerm ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undertrial Prisoners Notification Center</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Main Content Styles */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Notification Center Styles */
+        .notification-container {
+            position: fixed;
+            top: 0;
+            right: -300px; /* Initially hide the notification center */
+            width: 300px;
+            height: 100%;
+            background-color: #f0f0f0;
+            overflow-y: auto;
+            transition: right 0.5s;
+            z-index: 1;
+        }
+
+        .notification {
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .notification h2 {
+            color: #333;
+        }
+
+        .close-btn {
+            background-color: #f44336;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            float: right;
+        }
+
+        /* Additional styles for table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Styles for pager */
+        .pager {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .pager li {
+            margin: 0 5px;
+            font-size: 18px;
+        }
+
+        .pager a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Undertrial Prisoners Notification Center</h1>
+    </header>
+
+  
+      <div class="view-content">
+      <table class="views-table cols-3">
+         <thead>
+      <tr>
+                  <th class="views-field views-field-counter" scope="col">
+            S.No.          </th>
+                  <th class="views-field views-field-title" scope="col">
+            Title          </th>
+                  <th class="views-field views-field-php" scope="col">
+            Download/Detail          </th>
+              </tr>
+    </thead>
+    <tbody>
+          <tr class="odd views-row-first">
+                  <td class="views-field views-field-counter">
+            1          </td>
+                  <td class="views-field views-field-title">
+            Notification No.19-2023 dated 14.09.2023 regarding Holding of Courts in Jail on regular basis to take up the cases of Undertrial prisoners.	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%2019-2023.pdf" target="_blank">Notification 19-2023.pdf</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-counter">
+            2          </td>
+                  <td class="views-field views-field-title">
+            Notification No. 18-2023 dated 14.09.2023 regarding Holding of Courts in Jail on regular basis to take up the cases of Undertrial prisoners.	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%2018-2023.pdf" target="_blank">Notification 18-2023.pdf</a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-counter">
+            3          </td>
+                  <td class="views-field views-field-title">
+            Notification 13-2023 dated 26.06.2023 regarding Holding of Courts in Jail on regular basis to take up the cases of Undertrial Prisoners.          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%2013-2023.pdf" target="_blank">Notification 13-2023.pdf</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-counter">
+            4          </td>
+                  <td class="views-field views-field-title">
+            Notification No. 06-2023 dated 28.03.2023 regarding Holding of Courts in Jail on regular basis to take up the cases of Undertrial prisoners.	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%2006-2023.pdf" target="_blank">Notification 06-2023.pdf</a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-counter">
+            5          </td>
+                  <td class="views-field views-field-title">
+            Notification No. 41-2022 dated 28.12.2022 regarding Holding of Courts in Jail on regular basis to take up the cases of Under Trial Prisoners	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%2041-2022.pdf" target="_blank">Notification 41-2022.pdf</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-counter">
+            6          </td>
+                  <td class="views-field views-field-title">
+            Notification No. 40-2022 dated 28.12.2022 regarding Holding of Courts in Jail on regular basis to take up the cases of Under Trial Prisoners	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%2040-2022.pdf" target="_blank">Notification 40-2022.pdf</a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-counter">
+            7          </td>
+                  <td class="views-field views-field-title">
+            Holiday &amp; Sunday Court of Metropolitan Magistrates, Mumbai for production of Accused person within 24 Hours.          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/2182-2022_0.pdf" target="_blank">2182-2022.pdf</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-counter">
+            8          </td>
+                  <td class="views-field views-field-title">
+            Regarding Holiday Remand court for producing Juvenile in conflict with Law.          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/2183-2022_0.pdf" target="_blank">2183-2022.pdf</a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-counter">
+            9          </td>
+                  <td class="views-field views-field-title">
+            Notification No. 28-2022 dated 26.09.2022 regarding Holding of Courts in Jail on regular basis to take up the cases of Under-trial Prisoners.	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%2028-2022.pdf" target="_blank">Notification 28-2022.pdf</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-counter">
+            10          </td>
+                  <td class="views-field views-field-title">
+            Notification No. 29-2022 dated 26.09.2022 regarding Holding of Courts in Jail on regular basis to take up the cases of Undertrial prisoners.	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%20No.%2029-2022.pdf" target="_blank">Notification No. 29-2022.pdf</a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-counter">
+            11          </td>
+                  <td class="views-field views-field-title">
+            Holding of Courts in Jail on regular basis to take up the cases of Undertrial prisoners. Notification No 21-2022 dated 24.06.2022	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification-21-2022.pdf" target="_blank">Notification-21-2022.pdf</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-counter">
+            12          </td>
+                  <td class="views-field views-field-title">
+            Holding of Courts in Jail on regular basis to take up the cases of Under-trial Prisoners. Notification No 20-2022 dated 24.06.2022	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%20-%2020-2022.pdf" target="_blank">Notification - 20-2022.pdf</a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-counter">
+            13          </td>
+                  <td class="views-field views-field-title">
+            Holiday Remand Court for producing Juvenile in conflict with Law . Office Order No 1093-2022 dated 23.06.2022.	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/1093-2022.pdf" target="_blank">1093-2022.pdf</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-counter">
+            14          </td>
+                  <td class="views-field views-field-title">
+            Holiday &amp; Sunday Court of Metropolitan Magistrates, Mumbai for production of Accused person within 24 Hours. Office Order No 1092-2022 dated 23.06.2022	          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/1092-2022.pdf" target="_blank">1092-2022.pdf</a>          </td>
+              </tr>
+          <tr class="odd views-row-last">
+                  <td class="views-field views-field-counter">
+            15          </td>
+                  <td class="views-field views-field-title">
+            Notification No. 11-2022 dated 24.03.2022 regarding Holding of Courts in Jail on regular basis to take up the case          </td>
+                  <td class="views-field views-field-php">
+            <a href="https://districts.ecourts.gov.in/sites/default/files/Notification%2011-2022.pdf" target="_blank">Notification 11-2022.pdf</a>          </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+      <h2 class="element-invisible">Pages</h2><div class="item-list"><ul class="pager"><li class="pager-current first">1</li>
+<li class="pager-item"><a title="Go to page 2" href="/india/maharashtra/mumbai-cmm-court/notification?page=1">2</a></li>
+<li class="pager-item"><a title="Go to page 3" href="/india/maharashtra/mumbai-cmm-court/notification?page=2">3</a></li>
+<li class="pager-item"><a title="Go to page 4" href="/india/maharashtra/mumbai-cmm-court/notification?page=3">4</a></li>
+<li class="pager-item"><a title="Go to page 5" href="/india/maharashtra/mumbai-cmm-court/notification?page=4">5</a></li>
+<li class="pager-item"><a title="Go to page 6" href="/india/maharashtra/mumbai-cmm-court/notification?page=5">6</a></li>
+<li class="pager-item"><a title="Go to page 7" href="/india/maharashtra/mumbai-cmm-court/notification?page=6">7</a></li>
+<li class="pager-item"><a title="Go to page 8" href="/india/maharashtra/mumbai-cmm-court/notification?page=7">8</a></li>
+<li class="pager-next"><a title="Go to next page" href="/india/maharashtra/mumbai-cmm-court/notification?page=1">next ›</a></li>
+<li class="pager-last last"><a title="Go to last page" href="/india/maharashtra/mumbai-cmm-court/notification?page=7">last »</a></li>
+</ul></div>  
+  
+    
+</div>
+  
+  </div>
+</div>
+  </div>
+</div>
+    </script>
+</body>
+</html>
+<!-- ... Your HTML code above ... -->
+
+ <script>
+        // JavaScript code
+        function openNotificationCenter() {
+            document.querySelector('.notification-container').style.right = '0';
+        }
+
+        function closeNotificationCenter() {
+            document.querySelector('.notification-container').style.right = '-300px';
+        }
+
+        // Automatically slide in the notification center after 3 seconds (for demonstration)
+        setTimeout(function() {
+            openNotificationCenter();
+        }, 3000);
+    </script>
+</body>
+</html>
